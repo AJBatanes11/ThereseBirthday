@@ -1,2 +1,3 @@
-# HBDTherese
-Birthday website for Therese 2023 
+# ThereseBirthday
+Birthday website for Therese Reyes
+![Thumbnail](images/BGIMG-1.jpg)
