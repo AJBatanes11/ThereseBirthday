@@ -217,6 +217,17 @@ html {
     line-height: 2.5;
 }
 
+@media(max-width: 589px) {
+    .caption {
+        top: 40%;
+    }
+    .caption span.border {
+        font-size: 20px;
+        letter-spacing: 1.5;
+        line-height: 2;
+    }
+}
+
 h3 {
     letter-spacing: 5px;
     text-transform: uppercase;
