@@ -24,6 +24,7 @@ window.onscroll = function () {
 function viewMore(batchNumber) {
     const b2Container = document.getElementById('b2');
     const b3Container = document.getElementById('b3');
+    const b4Container = document.getElementById('b4');
     var viewMoreBtn = document.getElementById('viewMoreBtn');
     switch (batchNumber) {
         case "b2":
@@ -39,13 +40,24 @@ function viewMore(batchNumber) {
             if (parseInt(b3Container.style.maxHeight) === 0) {
                 b3Container.style.maxHeight = "2000%";
                 b3Container.style.opacity = "1";
-                viewMoreBtn.textContent = 'View Less';
+                viewMoreBtn.setAttribute('onclick', "viewMore('b4')");
                 window.location = '#b3';
+            }
+            break;
+
+        case "b4":
+            if (parseInt(b4Container.style.maxHeight) === 0) {
+                b4Container.style.maxHeight = "2000%";
+                b4Container.style.opacity = "1";
+                viewMoreBtn.textContent = 'View Less';
+                window.location = '#b4';
             } else {
                 b2Container.style.maxHeight = "0";
                 b3Container.style.maxHeight = "0";
+                b4Container.style.maxHeight = "0";
                 b3Container.style.opacity = "0";
                 b2Container.style.opacity = "0";
+                b4Container.style.opacity = "0";
                 viewMoreBtn.setAttribute('onclick', "viewMore('b2')");
                 viewMoreBtn.textContent = 'View More';
                 window.location = '#greetings';
