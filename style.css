@@ -21,6 +21,11 @@
 
 @media only screen and (min-width:1050px){.widescreen--show{display:block !important;}.widescreen--hide{display:none !important;}.widescreen--text-left{text-align:left !important;}.widescreen--text-right{text-align:right !important;}.widescreen--text-center{text-align:center !important;}}
 
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
 
 /* SCROLLBAR */
 ::-webkit-scrollbar {
@@ -169,9 +174,10 @@ html {
     position: relative;
     opacity: 0.60;
     background-attachment: fixed;
-    background-position: center center;
-    /* background-repeat: no-repeat; */
+    background-position: center;
+    background-repeat: no-repeat;
     background-size: cover;
+    margin: 0 auto; 
 
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -192,6 +198,14 @@ html {
     background-image: url(images/BGIMG-3.jpeg);
     min-height: 50%;
 }
+
+/* @media only screen and (max-device-width: 1366px) {
+    .bgimg-1,
+    .bgimg-2,
+    .bgimg-3 {
+      background-attachment: scroll;
+    }
+} */
 
 .caption {
     position: absolute;
